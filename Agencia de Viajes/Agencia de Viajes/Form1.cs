@@ -29,6 +29,7 @@ namespace Agencia_de_Viajes
 
         private void venderVueloToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //primero comentario "Hola Mundo"
             FrmTicket frmTicket = new FrmTicket();
             frmTicket.MdiParent = this;
             frmTicket.Text = "venta de tickets" + this.MdiChildren.ToString();
