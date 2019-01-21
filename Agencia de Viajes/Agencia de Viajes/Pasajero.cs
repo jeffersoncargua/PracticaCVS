@@ -11,6 +11,7 @@ namespace Agencia_de_Viajes
     [Table(Name ="tblPasajero")]
     public class Pasajero
     {
+        //Comentario Hola Mundo
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         private int idPasajero;
         [Column]
