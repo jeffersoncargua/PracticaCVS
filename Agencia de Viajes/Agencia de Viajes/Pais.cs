@@ -15,6 +15,7 @@ namespace Agencia_de_Viajes
         private int idPais;
         [Column]
         private string nombrePais;
+        int numero;
 
         public Pais() { }
 
