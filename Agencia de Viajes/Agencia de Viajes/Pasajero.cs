@@ -19,9 +19,9 @@ namespace Agencia_de_Viajes
         [Column]
         private string apellidoPasajero;
 
-        public borrar(){
+        /*public borrar(){
 
-        }
+        }*/
 
 
         public Pasajero() { }
