@@ -25,10 +25,13 @@ namespace Agencia_de_Viajes
 
         public void CargarPasajeros()
         {
-            nuevoPasajero.IdPasajero = 1;
-            nuevoPasajero.NombrePasajero = "Jefferson";
-            nuevoPasajero.ApellidoPasajero = "Cargua";
+            nuevoPasajero.IdPasajero = 1; nuevoPasajero.NombrePasajero = "Jefferson";nuevoPasajero.ApellidoPasajero = "Cargua";
             lbxPasajeros.Items.Add(nuevoPasajero);
+            nuevoPasajero.IdPasajero = 2; nuevoPasajero.NombrePasajero = "Marlon"; nuevoPasajero.ApellidoPasajero = "Apolo";
+            lbxPasajeros.Items.Add(nuevoPasajero);
+            nuevoPasajero.IdPasajero = 3; nuevoPasajero.NombrePasajero = "Kevin"; nuevoPasajero.ApellidoPasajero = "Jaramillo";
+            lbxPasajeros.Items.Add(nuevoPasajero);
+
             /*var listaPasajeros = from pasa in this.baseDatos.tblPasajero
                                  select pasa;
             foreach (var iter in listaPasajeros)
@@ -39,8 +42,11 @@ namespace Agencia_de_Viajes
 
         public void cargarAgencia()
         {
-            nuevoAgencia.IdAgencia = 1;
-            nuevoAgencia.NombreAgencia = "TAME";
+            nuevoAgencia.IdAgencia = 1;nuevoAgencia.NombreAgencia = "TAME";
+            cboAgencia.Items.Add(nuevoAgencia);
+            nuevoAgencia.IdAgencia = 2; nuevoAgencia.NombreAgencia = "IBERIA";
+            cboAgencia.Items.Add(nuevoAgencia);
+            nuevoAgencia.IdAgencia = 3; nuevoAgencia.NombreAgencia = "TAME";
             cboAgencia.Items.Add(nuevoAgencia);
             /*var listaAgencia = from agen in this.baseDatos.tblAgecia
                                select agen;
@@ -52,8 +58,11 @@ namespace Agencia_de_Viajes
 
         public void cargarPais()
         {
-            nuevoPais.IdPais = 1;
-            nuevoPais.NombrePais = "Ecuador";
+            nuevoPais.IdPais = 1;nuevoPais.NombrePais = "Ecuador";
+            cboPais.Items.Add(nuevoPais);
+            nuevoPais.IdPais = 2; nuevoPais.NombrePais = "Chile";
+            cboPais.Items.Add(nuevoPais);
+            nuevoPais.IdPais = 3; nuevoPais.NombrePais = "Argentina";
             cboPais.Items.Add(nuevoPais);
             /*var listaPais = from pais in this.baseDatos.tblPais
                             select pais;
