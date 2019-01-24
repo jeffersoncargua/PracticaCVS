@@ -19,6 +19,11 @@ namespace Agencia_de_Viajes
         [Column]
         private string apellidoPasajero;
 
+        public borrar(){
+
+        }
+
+
         public Pasajero() { }
 
         public override string ToString()
