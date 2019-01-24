@@ -8,12 +8,12 @@ using System.Data.Linq.Mapping;
 
 namespace Agencia_de_Viajes
 {
-   // [Table(Name = "tblPais")]
+    [Table(Name = "tblPais")]
     public class Pais
     {
-        //[Column(IsPrimaryKey = true, IsDbGenerated = true)]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         private int idPais;
-        //[Column]
+        [Column]
         private string nombrePais;
         int num;
 

@@ -13,7 +13,7 @@ namespace Agencia_de_Viajes
 {
     public partial class FrmTicket : Form
     {
-        //linq baseDatos = new linq();
+        linq baseDatos = new linq();
         Pasajero nuevoPasajero = new Pasajero();
         Agencia nuevoAgencia = new Agencia();
         Pais nuevoPais = new Pais();
@@ -25,51 +25,51 @@ namespace Agencia_de_Viajes
 
         public void CargarPasajeros()
         {
-            nuevoPasajero.IdPasajero = 1; nuevoPasajero.NombrePasajero = "Jefferson";nuevoPasajero.ApellidoPasajero = "Cargua";
+            /*nuevoPasajero.IdPasajero = 1; nuevoPasajero.NombrePasajero = "Jefferson";nuevoPasajero.ApellidoPasajero = "Cargua";
             lbxPasajeros.Items.Add(nuevoPasajero);
             nuevoPasajero.IdPasajero = 2; nuevoPasajero.NombrePasajero = "Marlon"; nuevoPasajero.ApellidoPasajero = "Apolo";
             lbxPasajeros.Items.Add(nuevoPasajero);
             nuevoPasajero.IdPasajero = 3; nuevoPasajero.NombrePasajero = "Kevin"; nuevoPasajero.ApellidoPasajero = "Jaramillo";
-            lbxPasajeros.Items.Add(nuevoPasajero);
+            lbxPasajeros.Items.Add(nuevoPasajero);*/
 
-            /*var listaPasajeros = from pasa in this.baseDatos.tblPasajero
+            var listaPasajeros = from pasa in this.baseDatos.tblPasajero
                                  select pasa;
             foreach (var iter in listaPasajeros)
             {
                 lbxPasajeros.Items.Add(iter);
-            }*/
+            }
         }
 
         public void cargarAgencia()
         {
-            nuevoAgencia.IdAgencia = 1;nuevoAgencia.NombreAgencia = "TAME";
+            /*nuevoAgencia.IdAgencia = 1;nuevoAgencia.NombreAgencia = "TAME";
             cboAgencia.Items.Add(nuevoAgencia);
             nuevoAgencia.IdAgencia = 2; nuevoAgencia.NombreAgencia = "IBERIA";
             cboAgencia.Items.Add(nuevoAgencia);
             nuevoAgencia.IdAgencia = 3; nuevoAgencia.NombreAgencia = "TAME";
-            cboAgencia.Items.Add(nuevoAgencia);
-            /*var listaAgencia = from agen in this.baseDatos.tblAgecia
+            cboAgencia.Items.Add(nuevoAgencia);*/
+            var listaAgencia = from agen in this.baseDatos.tblAgecia
                                select agen;
             foreach (var iter in listaAgencia)
             {
                 cboAgencia.Items.Add(iter);
-            }*/
+            }
         }
 
         public void cargarPais()
         {
-            nuevoPais.IdPais = 1;nuevoPais.NombrePais = "Ecuador";
+            /*nuevoPais.IdPais = 1;nuevoPais.NombrePais = "Ecuador";
             cboPais.Items.Add(nuevoPais);
             nuevoPais.IdPais = 2; nuevoPais.NombrePais = "Chile";
             cboPais.Items.Add(nuevoPais);
             nuevoPais.IdPais = 3; nuevoPais.NombrePais = "Argentina";
-            cboPais.Items.Add(nuevoPais);
-            /*var listaPais = from pais in this.baseDatos.tblPais
+            cboPais.Items.Add(nuevoPais);*/
+            var listaPais = from pais in this.baseDatos.tblPais
                             select pais;
             foreach (var iter in listaPais)
             {
                 cboPais.Items.Add(iter);
-            }*/
+            }
         }
 
         private void FrmTicket_Load(object sender, EventArgs e)
@@ -108,8 +108,8 @@ namespace Agencia_de_Viajes
                 nuevo.IdPais = nuevoPais.IdPais;
                 nuevo.NumMaletas = Convert.ToInt32(txtMaletas.Text);
                 nuevo.Total = Convert.ToDouble(txtTotal.Text);
-                //baseDatos.tblVuelo.InsertOnSubmit(nuevo);
-                //baseDatos.SubmitChanges();
+                baseDatos.tblVuelo.InsertOnSubmit(nuevo);
+                baseDatos.SubmitChanges();
                 MessageBox.Show("Ticket Vendido");
                 this.Close();
             }

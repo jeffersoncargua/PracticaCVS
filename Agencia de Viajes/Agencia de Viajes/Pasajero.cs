@@ -8,15 +8,15 @@ using System.Data.Linq.Mapping;
 
 namespace Agencia_de_Viajes
 {
-    //[Table(Name ="tblPasajero")]
+    [Table(Name ="tblPasajero")]
     public class Pasajero
     {
         //Comentario Hola Mundo
-       // [Column(IsPrimaryKey = true, IsDbGenerated = true)]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         private int idPasajero;
-        //[Column]
+        [Column]
         private string nombrePasajero;
-        //[Column]
+        [Column]
         private string apellidoPasajero;
 
         /*public borrar(){
